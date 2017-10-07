@@ -1,0 +1,64 @@
+h1,h3,p,a,button{
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+.onepage{
+    height: 750px;
+}
+.onepage-bg{
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    background-position: center center;
+    background-size: cover;
+}
+.title-text{
+    margin-left: 70px;
+}
+.headh1content{
+    margin-top: 150px;
+    line-height:75px;
+}
+.headfontsize h1{
+    font-size:35pt;
+    color: white;
+}
+.headfontsize p{
+    color: white;
+    line-height: 50px;
+}
+#nav a{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+#nav a:hover{
+    background-color: turquoise;
+    border-radius: 5px;
+}
+#nav{
+    background: none;
+    border: none;
+}
+.actived{
+    background-color: lightseagreen;
+    border-radius: 8px;
+}
+
+.bg{
+
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    background-position: center center;
+    background-size: cover;
+}
+.loginbox{
+    border: 1px lightgray solid; padding: 15px; margin-top: 15%;background-color: white; opacity: 1; border-radius: 7px;
+}
+.title{
+    text-align: center;
+}
+#code{
+    width:175px;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
