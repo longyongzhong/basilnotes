@@ -21,7 +21,7 @@ http://119.29.15.105/note
 以Linux deepin为例（已配置好php运行环境）
 + 下载zip或者使用git克隆到/var/www/html目录
 + 建立名为note(也可以其它名字)的mysql数据库，然后导入test.sql数据
-+ 修改项目根目录下.env文件：
++ 修改项目根目录下.env配置文件：
 <pre>
 //配置数据库
 DB_HOST=127.0.0.1
