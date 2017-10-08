@@ -19,9 +19,9 @@ mysql版本 >=5.5
 apache2
 ## 安装
 以Linux deepin为例（已配置好php运行环境）
-+下载zip或者使用git克隆到/var/www/html目录
-+建立名为note(也可以其它名字)的mysql数据库
-
++ 下载zip或者使用git克隆到/var/www/html目录
++ 建立名为note(也可以其它名字)的mysql数据库
+ 
 
 
 ## License
