@@ -21,10 +21,24 @@ http://119.29.15.105/note
 以Linux deepin为例（已配置好php运行环境）
 + 下载zip或者使用git克隆到/var/www/html目录
 + 建立名为note(也可以其它名字)的mysql数据库，然后导入test.sql数据
-+ 修改项目根目录下.env文件
- 
++ 修改项目根目录下.env文件：
+<pre>
+//配置数据库
+DB_HOST=127.0.0.1
+DB_DATABASE=note
+DB_USERNAME=root
+DB_PASSWORD=123456
+//配置邮箱服务器（以qq邮箱为例，需要开通stmp服务）
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.qq.com
+MAIL_PORT=587
+MAIL_USERNAME=123456@qq.com
+MAIL_PASSWORD=123456
+MAIL_ENCRYPTION=tls
+</pre>
++ 首页地址为（以本地为例）：http://localhost/basilnotes
++ 后台用户管理地址及账号密码：http://localhost/basilnotes/public/index.php/managelogin 账号：root 密码:123456
 
+## 交流联系方式
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Email：15813246678@163.com
