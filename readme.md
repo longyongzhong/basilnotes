@@ -2,13 +2,12 @@
 
 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+basilnotes是一款简洁的在线笔记，利用laravel框架由cxwt工作室开发，该笔记包含写笔记、保存笔记、修改笔记、分类管理、删除恢复、用户注册等功能。可以安装在配置了php运行环境的个人电脑上使用，也可以部署在服务器上供多人使用。此笔记是作者在学习laravel框架时开发出来的，不足之处，敬请指出改正。
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Official Documentation
+## 项目演示地址
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+http://119.29.15.105/notes
 
 ## Contributing
 
