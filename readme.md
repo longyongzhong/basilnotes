@@ -8,7 +8,7 @@ basilnotes是一款简洁的在线笔记，利用laravel框架由cxwt工作室�
 ## 项目演示地址
 
 http://119.29.15.105/note
-![](https://github.com/longyongzhong/basilnotes/public/images/DeepinScreenshot_select-area_20171101145144.png)
+![主界面](https://github.com/longyongzhong/basilnotes/blob/master/public/images/DeepinScreenshot_select-area_20171101145144.png)
 
 ## 环境要求
 + PHP版本 >= 5.5.9
