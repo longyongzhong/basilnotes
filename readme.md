@@ -33,8 +33,8 @@ MAIL_PASSWORD=123456
 MAIL_ENCRYPTION=tls
 </pre>
 + 首页地址为（以本地为例）：http://localhost/basilnotes
+  登录账号11111111@qq.com,密码123456
 + 后台用户管理地址及账号密码：http://localhost/basilnotes/public/index.php/managelogin 账号：root 密码:123456
-
 ## 交流联系方式
 
 Email：15813246678@163.com
