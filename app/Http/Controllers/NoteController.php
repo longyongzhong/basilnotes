@@ -22,7 +22,7 @@ class NoteController extends Controller
     }
 //写笔记
     public function writenote(Request $request){
-        if ($request->all()){
+        if ($request->method() === 'POST'){
             if ($request->input('content')==""||$request->input('title')==""){
                 return redirect("/write")->with("error","内容或这标题不能为空!");
             }
@@ -62,7 +62,7 @@ class NoteController extends Controller
     }
 //分类管理
     public function manageclass(Request $request){
-        if ($request->all()){
+        if ($request->method() === 'POST'){
             if ($request->input('classname')==""||$request->input('classname')=="common"){
                 if ($request->input('classname')==""){
                     return redirect("/class")->with("info","分类不能为空");
@@ -121,7 +121,7 @@ class NoteController extends Controller
     //回收站
     public function trash(Request $request){
         $noteclass = Category::where("owner",session('user'))->get();
-        if ($request->all()){
+        if ($request->method() === 'POST'){
             $keyword = $request->input('name');
             $notesdeleted = Notes::where("title","like","%".$keyword."%")->where(["owner"=>session('user'),"intrash"=>"1"])->orderBy('date', 'desc')->get();
         }else{
@@ -155,7 +155,7 @@ class NoteController extends Controller
 
     //保存修改
     public function savemodify(Request $request){
-        if ($request->all()){
+        if ($request->method() === 'POST'){
             $id = $request->input('id');
             $content = htmlspecialchars($request->input('content'));
             $savenote =Notes::where("id",$id)->update(["content"=>$content]);
@@ -208,7 +208,7 @@ class NoteController extends Controller
     }
     //移动笔记
     public function movetoclass(Request $request){
-        if ($request->all()){
+        if ($request->method() === 'POST'){
             if ($request->input('id')!=""&&$request->input('oldclass')!==""&&$request->input('toclass')!=""){
                 if ($request->input('toclass')==$request->input('oldclass')){
                     echo "对不起,您移动的分类相同";
@@ -265,7 +265,7 @@ class NoteController extends Controller
     //恢复笔记
     public function recovertoclass(Request $request){
 
-        if ($request->all()){
+        if ($request->method() === 'POST'){
             $id = $request->input('id');
             $toclass = $request->input('toclass');
             if ($id==""||$toclass==""){
@@ -302,7 +302,7 @@ class NoteController extends Controller
 
     //修改密码
     public function modifypassword(Request $request){
-        if ($request->all()){
+        if ($request->method() === 'POST'){
             $oldpassword = $request->input('oldpassword');
             $newpassword = $request->input('password');
             $cfpassword = $request->input('cfpassword');
@@ -344,7 +344,7 @@ class NoteController extends Controller
     //搜索用户
     public function searchuser(Request $request)
     {
-        if ($request->all()) {
+        if ($request->method() === 'POST') {
             $keyword = $request->input('useremail');
             $userdata = Users::where("email", "like", "%".$keyword."%")->orderBy('regtime', 'desc')->get();
             $users = Users::all();
@@ -358,7 +358,7 @@ class NoteController extends Controller
     }
     //修改用户状态
     public function changeuserstatus(Request $request){
-        if ($request->all()){
+        if ($request->method() === 'POST'){
             if ($request->input('id')!=""&&$request->input('status')!=""){
                 $userid = $request->input('id');
                 $userstatus = $request->input('status');
@@ -376,7 +376,7 @@ class NoteController extends Controller
 
     //删除用户
     public function deleteuser(Request $request){
-        if ($request->all()){
+        if ($request->method() === 'POST'){
             $id = $request->input(['id']);
             $email = $request->input('email');
             $userclassnum = Category::where(["owner"=>$email])->count();
@@ -436,7 +436,7 @@ class NoteController extends Controller
     }
     //修改管理员密码
     public function modifyadminpass(Request $request){
-        if ($request->all()){
+        if ($request->method() === 'POST'){
             $oldpassword = $request->input('oldpassword');
             $newpassword = $request->input('password');
             $cfpassword = $request->input('cfpassword');

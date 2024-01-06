@@ -19,7 +19,8 @@ class LoginController extends Controller
 {
     //用户登录
     public function login(Request $request){
-        if ($data = Input::all()){
+        if ($request->method() === 'POST'){
+            $data = $request->input();
             $useremail = $data['email'];
             $userpassword = $data['password'];
             $code = strtoupper($data['code']);
@@ -53,7 +54,8 @@ class LoginController extends Controller
     }
     //用户注册
     public function reg(Request $request){
-        if ($regdata = Input::all()){
+        if ($request->method() === 'POST'){
+            $regdata = $request->input();
             //自定义错误提示信息
             $messages  = [
                 "required"=>":attribute 不能为空！",
@@ -163,7 +165,8 @@ class LoginController extends Controller
     }
 //找回密码
 public function findpassword(Request $request){
-        if ($data = Input::all()){
+        if ($request->method() === 'POST'){
+            $data = Input::all();
             $email = $data['email'];
             $counts = Users::where('email',$email)->count();
             $user = Users::where('email',$email)->first();
@@ -202,8 +205,9 @@ public function findpassword(Request $request){
 }
 
 //管理员登录
-public function managelogin(){
-    if ($data = Input::all()){
+public function managelogin(Request $request){
+    if ($request->method() === 'POST'){
+        $data = Input::all();
         $managername = $data['name'];
         $managerpass = $data['password'];
         $code = strtoupper($data['code']);
