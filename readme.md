@@ -32,6 +32,14 @@ MAIL_USERNAME=123456@qq.com
 MAIL_PASSWORD=123456
 MAIL_ENCRYPTION=tls
 </pre>
++ nginx设置伪静态
+```
+location / {
+if (!-e $request_filename){
+    rewrite  ^(.*)$  /index.php?s=$1  last;   break;
+    }
+}
+```
 + 首页地址为（以本地为例）：http://localhost/basilnotes
   登录账号11111111@qq.com,密码123456
 + 后台用户管理地址及账号密码：http://localhost/basilnotes/public/index.php/managelogin 账号：root 密码:123456
